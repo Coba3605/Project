@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:id="@+id/score"
+        android:textSize="13pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="score:0"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="40dp"
+            android:gravity="center">
+            <Button
+                android:id="@+id/summation"
+                android:text="summation"
+                android:textSize="14pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/subtraction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="subtraction"
+                android:textSize="14pt"/>
+            <Button
+                android:id="@+id/multiplication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="multiplication"
+                android:textSize="14pt"/>
+            <Button
+                android:id="@+id/division"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="division"
+                android:textSize="14pt"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>
