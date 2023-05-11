@@ -19,17 +19,17 @@ public class divisionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
         int Answer = setAnswer();
-        binding.score.setText("score: "+MenuActivity.score);
+        binding.score.setText(""+MenuActivity.score);
 
         binding.chek.setOnClickListener(view -> {
             if (String.valueOf(Answer).equals(binding.answer.getText().toString())) {
-                Toast.makeText(getApplicationContext(), "true", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.True, Toast.LENGTH_SHORT).show();
                 MenuActivity.score++;
-                binding.score.setText("score: "+MenuActivity.score);
+                startActivity(divisionActivity.getInstancedivision(this));
             } else {
-                Toast.makeText(getApplicationContext(), "False", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.False, Toast.LENGTH_SHORT).show();
                 MenuActivity.score--;
-                binding.score.setText("score: "+MenuActivity.score);
+                startActivity(divisionActivity.getInstancedivision(this));
             }
         });
         binding.goMenu.setOnClickListener(view -> {

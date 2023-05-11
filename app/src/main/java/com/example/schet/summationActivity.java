@@ -18,24 +18,26 @@ public class summationActivity extends AppCompatActivity {
         binding = ActivitySummationBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
-        binding.score.setText("score: " + MenuActivity.score);
+        binding.score.setText(""+MenuActivity.score);
 
         int Answer = setAnswer();
 
         binding.chek.setOnClickListener(view -> {
             if (String.valueOf(Answer).equals(binding.answer.getText().toString())) {
-                Toast.makeText(getApplicationContext(), "true", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.True, Toast.LENGTH_SHORT).show();
                 MenuActivity.score++;
-                binding.score.setText("score: " + MenuActivity.score);
+                startActivity(summationActivity.getInstancesummation(this));
+
+
 
             } else {
-                Toast.makeText(getApplicationContext(), "False", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.False, Toast.LENGTH_SHORT).show();
                 MenuActivity.score--;
-                binding.score.setText("score: " + MenuActivity.score);
+                startActivity(summationActivity.getInstancesummation(this));
             }
         });
         binding.goMenu.setOnClickListener(view -> {
-            startActivity(MenuActivity.getInstanceMenu(this));
+            startActivity(MenuActivity.getInstanceMenu( this));
         });
     }
 

@@ -12,12 +12,14 @@ public class MenuActivity extends AppCompatActivity {
     ActivityMenuBinding binding;
 static public int score = 0;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
-        binding.score.setText("score: "+score);
+        binding.score.setText(""+score);
         binding.subtraction.setOnClickListener(view ->{
             startActivity(subtractionActivity.getInstancesubstraction(this));
         });

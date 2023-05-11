@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Счёт</string>
+    <string name="score">Счёт:</string>
+    <string name="hello_blank_fragment">Бф</string>
+    <string name="menu">Меню</string>
+    <string name="answer">ответ</string>
+    <string name="chek">Проверить</string>
+    <string name="text">текст</string>
+    <string name="start">Начать</string>
+    <string name="score_0">Счёт:0</string>
+    <string name="summation">Сложение</string>
+    <string name="subtraction">Вычитание</string>
+    <string name="multiplication">Умножение</string>
+    <string name="division">Деление</string>
+    <string name="True">Правильно</string>
+    <string name="False">Неверно</string>
+</resources>
