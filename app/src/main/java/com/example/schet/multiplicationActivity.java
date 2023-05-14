@@ -18,18 +18,18 @@ public class multiplicationActivity extends AppCompatActivity {
         binding = ActivityMultiplicationBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
-        binding.score.setText(""+MenuActivity.score);
+
 
         int Answer = setAnswer();
 
         binding.chek.setOnClickListener(view -> {
             if (String.valueOf(Answer).equals(binding.answer.getText().toString())) {
                 Toast.makeText(getApplicationContext(), R.string.True, Toast.LENGTH_SHORT).show();
-                MenuActivity.score++;
+
                 startActivity(multiplicationActivity.getInstancemultiplication(this));
             } else {
                 Toast.makeText(getApplicationContext(), R.string.False, Toast.LENGTH_SHORT).show();
-                MenuActivity.score--;
+
                 startActivity(multiplicationActivity.getInstancemultiplication(this));
             }
         });

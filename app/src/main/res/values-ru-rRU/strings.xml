@@ -15,4 +15,10 @@
     <string name="division">Деление</string>
     <string name="True">Правильно</string>
     <string name="False">Неверно</string>
+    <string name="play">Играть</string>
+    <string name="win">!!!Победа!!!</string>
+    <string name="lose">Поражение :(</string>
+    <string name="time_spent">"Времени затрачено: "</string>
+    <string name="miss_made">"Ошибок допущено: "</string>
+    <string name="_1_to_9">Выбери все числа от 1 до 9 в правильном порядке</string>
 </resources>

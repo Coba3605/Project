@@ -1,9 +1,8 @@
 package com.example.schet;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.schet.databinding.ActivityMainBinding;
 

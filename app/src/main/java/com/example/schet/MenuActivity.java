@@ -10,8 +10,6 @@ import com.example.schet.databinding.ActivityMenuBinding;
 
 public class MenuActivity extends AppCompatActivity {
     ActivityMenuBinding binding;
-static public int score = 0;
-
 
 
     @Override
@@ -19,8 +17,8 @@ static public int score = 0;
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
-        binding.score.setText(""+score);
-        binding.subtraction.setOnClickListener(view ->{
+
+        binding.subtraction.setOnClickListener(view -> {
             startActivity(subtractionActivity.getInstancesubstraction(this));
         });
         binding.summation.setOnClickListener(view -> {
@@ -32,6 +30,9 @@ static public int score = 0;
         });
         binding.division.setOnClickListener(view -> {
             startActivity(divisionActivity.getInstancedivision(this));
+        });
+        binding.play.setOnClickListener(view -> {
+            startActivity(play9Activity.getInstancePlay9(this));
         });
     }
 
