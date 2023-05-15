@@ -21,4 +21,6 @@
     <string name="time_spent">"Time spent: "</string>
     <string name="miss_made">"Misstakes made: "</string>
     <string name="_1_to_9">1 to 9</string>
+    <string name="Answ">Your answer is wrong</string>
+    <string name="Anst">Your answer is correct</string>
 </resources>
