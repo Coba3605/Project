@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@drawable/back_project"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -20,50 +21,49 @@
                 android:text="@string/summation"
                 android:layout_margin="10dp"
                 android:textSize="30sp"
-                android:background="#FF0000"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"/>
             <Button
                 android:id="@+id/subtraction"
-                android:background="#FF6600"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/subtraction"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"/>
             <Button
                 android:id="@+id/multiplication"
-                android:background="#FFDD00"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/multiplication"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"/>
             <Button
                 android:id="@+id/division"
-                android:background="#00FF0A"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/division"
-                android:textSize="30sp"/>
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"/>
             <Button
                 android:id="@+id/play"
-                android:background="#0027FF"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:textColor="@color/white"
+                android:background="@android:color/transparent"
                 android:text="@string/play"
                 android:textSize="30sp"/>
 
 
         </LinearLayout>
-
-
-
-
-
     </ScrollView>
 
 

@@ -23,4 +23,5 @@
     <string name="_1_to_9">Выбери все числа от 1 до 9 в правильном порядке</string>
     <string name="Answ">Ваш ответ неверный</string>
     <string name="Anst">Ваш ответ верный</string>
+    <string name="about_the_project">О приложении</string>
 </resources>
