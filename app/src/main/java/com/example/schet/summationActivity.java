@@ -20,7 +20,6 @@ public class summationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        dibinding = DialogBinding.inflate(getLayoutInflater());
         binding = ActivitySummationBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
@@ -48,18 +47,21 @@ public class summationActivity extends AppCompatActivity {
         return a + b;
     }
     public void Check(boolean flag){
-        setContentView(dibinding.getRoot());
+        TextView message,res;
         Dialog dialog = new Dialog(summationActivity.this);
         dialog.setTitle("Results");
+        dialog.setContentView(R.layout.dialog);
+        message = dialog.findViewById(R.id.dialog_1);
+        res = dialog.findViewById(R.id.dialog_time);
         if (flag){
-            dibinding.dialog1.setText(R.string.True);
-            dibinding.dialog1.setTextColor(getResources().getColor(R.color.green));
-            dibinding.dialogTime.setText(R.string.Anst);
+            message.setText(R.string.True);
+            message.setTextColor(getResources().getColor(R.color.green));
+            res.setText(R.string.Anst);
         }
         else {
-            dibinding.dialog1.setText(R.string.False);
-            dibinding.dialog1.setTextColor(getResources().getColor(R.color.red));
-            dibinding.dialogTime.setText(R.string.Answ);
+            message.setText(R.string.False);
+            message.setTextColor(getResources().getColor(R.color.red));
+            res.setText(R.string.Answ);
         }
         dialog.show();
         dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Счёт</string>
+    <string name="app_name">Считаем в уме</string>
     <string name="score">Счёт:</string>
     <string name="hello_blank_fragment">Бф</string>
     <string name="menu">Меню</string>
@@ -24,4 +24,5 @@
     <string name="Answ">Ваш ответ неверный</string>
     <string name="Anst">Ваш ответ верный</string>
     <string name="about_the_project">О приложении</string>
+    <string name="info">"Данное приложение созданов рамках курса IT школы Samsung.\nЭто приложение поможет детям научиться быстро считать в уме и разовьёт внимательность.\nСоздатель: Силин Данил "</string>
 </resources>

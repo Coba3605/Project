@@ -24,4 +24,5 @@
     <string name="Answ">Your answer is wrong</string>
     <string name="Anst">Your answer is correct</string>
     <string name="about_the_project">about the project</string>
+    <string name="info">info</string>
 </resources>
