@@ -25,4 +25,6 @@
     <string name="Anst">Your answer is correct</string>
     <string name="about_the_project">about the project</string>
     <string name="info">info</string>
+    <string name="sequence">sequence</string>
+    <string name="Trueanswer">True answer:</string>
 </resources>

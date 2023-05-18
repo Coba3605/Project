@@ -1,5 +1,7 @@
 package com.example.schet;
 
+import static com.example.schet.R.raw.win;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -7,6 +9,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -19,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 
 public class play9Activity extends AppCompatActivity {
+    MediaPlayer mediaPlayer;
     int time = 11000,counter = 0,miss = 0;
     boolean flag = false;
     ArrayList<Button> buttons = new ArrayList<Button>();
@@ -239,7 +243,6 @@ public class play9Activity extends AppCompatActivity {
             if (!btnum.contains(num) && num !=0){
                 btnum.add(num);
                 buttons.get(i).setText(String.valueOf(num));
-                Log.d("YES", String.valueOf(btnum));
                 i++;
             }
         }
@@ -247,11 +250,14 @@ public class play9Activity extends AppCompatActivity {
     }
 
     private void timer(long time){
+        mediaPlayer = MediaPlayer.create(this,R.raw.song_limo);
+        mediaPlayer.start();
         CountDownTimer countDownTimer = new CountDownTimer(time,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 if (counter == 9){
                     cancel();
+
                     onFinish();
                 }
                 if ((millisUntilFinished/1000)-1>=0){
@@ -262,7 +268,7 @@ public class play9Activity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 TextView message,res_time,res_miss;
-
+                mediaPlayer.stop();
                 Dialog dialog = new Dialog(play9Activity.this);
                 dialog.setTitle("Results");
                 dialog.setContentView(R.layout.dialog);
@@ -270,19 +276,25 @@ public class play9Activity extends AppCompatActivity {
                 res_time = dialog.findViewById(R.id.dialog_time);
                 res_miss = dialog.findViewById(R.id.dialog_miss);
                 if (counter == 9){
+                    mediaPlayer = MediaPlayer.create(getApplicationContext(), win);
+                    mediaPlayer.start();
                     message.setText(R.string.win);
                     message.setTextColor(getResources().getColor(R.color.green));
                 }
                 else {
+                    mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.lose);
+                    mediaPlayer.start();
                     message.setText(R.string.lose);
                     message.setTextColor(getResources().getColor(R.color.red));
                 }
+
                 res_time.setText(getString(R.string.time_spent)+(10 - Integer.parseInt(binding.timer.getText().toString())));
                 res_miss.setText(getString(R.string.miss_made)+ miss);
                 dialog.show();
                 dialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialogInterface) {
+                        mediaPlayer.stop();
                         finish();
                         startActivity(getIntent());
                     }
@@ -292,6 +304,8 @@ public class play9Activity extends AppCompatActivity {
             }
         }.start();
     }
+
+
 
     public static Intent getInstancePlay9(Context context) {
         return new Intent(context, play9Activity.class);

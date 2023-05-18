@@ -6,10 +6,12 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.schet.DataBase.DataBaseManager;
 import com.example.schet.databinding.ActivityMenuBinding;
 
 public class MenuActivity extends AppCompatActivity {
     ActivityMenuBinding binding;
+    DataBaseManager dbManager;
 
 
     @Override
@@ -17,6 +19,7 @@ public class MenuActivity extends AppCompatActivity {
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
+        dbManager = new DataBaseManager(this);
 
         binding.subtraction.setOnClickListener(view -> {
             startActivity(subtractionActivity.getInstancesubstraction(this));

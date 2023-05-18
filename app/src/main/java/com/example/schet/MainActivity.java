@@ -2,22 +2,26 @@ package com.example.schet;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.schet.DataBase.DataBaseManager;
 import com.example.schet.databinding.ActivityMainBinding;
 import com.example.schet.databinding.DialogBinding;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    DataBaseManager dbManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
+        dbManager = new DataBaseManager(this);
         binding.start.setOnClickListener(view -> {
             startActivity(MenuActivity.getInstanceMenu(this));
         });
@@ -33,4 +37,6 @@ public class MainActivity extends AppCompatActivity {
             dialog.show();
         });
     }
+
+
 }
