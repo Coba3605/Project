@@ -23,7 +23,7 @@ public class divisionActivity extends AppCompatActivity {
         binding = ActivityDivisionBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
-        int Answer = setAnswer();
+        int Answer = setAnswer(MenuActivity.hardmode);
 
 
         binding.chek.setOnClickListener(view -> {
@@ -37,15 +37,26 @@ public class divisionActivity extends AppCompatActivity {
     }
 
 
-    int setAnswer() {
-        int a=0,b = 0;
-        while (b==0 || a%b!=0){
-            a = (int) (Math.random() * 100);
-            b = (int) (Math.random() * 100);
+    int setAnswer(boolean hardmode) {
+        if (hardmode){
+            int a=0,b = 0;
+            while (b==0 || a%b!=0){
+                a = (int) (Math.random() * 1000);
+                b = (int) (Math.random() * 1000);
+            }
+            binding.example.setText(a + "  / " + b + " = ");
+            return a / b;
+        }
+        else {
+            int a=0,b = 0;
+            while (b==0 || a%b!=0){
+                a = (int) (Math.random() * 100);
+                b = (int) (Math.random() * 10);
+            }
+            binding.example.setText(a + "  / " + b + " = ");
+            return a / b;
         }
 
-        binding.example.setText(a + "  / " + b + " = ");
-        return a / b;
 
     }
     public void Check(boolean flag,int a){

@@ -22,7 +22,7 @@ public class subtractionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
 
-        int Answer = setAnswer();
+        int Answer = setAnswer(MenuActivity.hardmode);
         binding.chek.setOnClickListener(view -> {
             if (String.valueOf(Answer).equals(binding.answer.getText().toString())) {
                 Check(true,Answer);
@@ -33,15 +33,26 @@ public class subtractionActivity extends AppCompatActivity {
 
     }
 
-    int setAnswer() {
-        int a = -1, b = 0;
-        while (a-b<0){
-             a = (int) (Math.random() * 100);
-             b = (int) (Math.random() * 100);
+    int setAnswer(boolean hardmode) {
+        if (hardmode){
+            int a = -1, b = 0;
+            while (a-b<0){
+                a = (int) (Math.random() * 1000);
+                b = (int) (Math.random() * 1000);
+            }
+            binding.example.setText(a + " - " + b + " =");
+            return a - b;
+        }
+        else {
+            int a = -1, b = 0;
+            while (a-b<0){
+                a = (int) (Math.random() * 10);
+                b = (int) (Math.random() * 10);
+            }
+            binding.example.setText(a + " - " + b + " =");
+            return a - b;
         }
 
-        binding.example.setText(a + " - " + b + " =");
-        return a - b;
     }
     public void Check(boolean flag,int a){
         TextView message,res;

@@ -27,4 +27,5 @@
     <string name="info">"Данное приложение созданов рамках курса IT школы Samsung.\nЭто приложение поможет детям научиться быстро считать в уме и разовьёт внимательность.\nСоздатель: Силин Данил "</string>
     <string name="sequence">Последовательность</string>
     <string name="Trueanswer">"Правильный ответ: "</string>
+    <string name="hard_mode">Сложный режим</string>
 </resources>

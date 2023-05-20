@@ -25,7 +25,7 @@ public class multiplicationActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
-        int Answer = setAnswer();
+        int Answer = setAnswer(MenuActivity.hardmode);
 
         binding.chek.setOnClickListener(view -> {
             if (String.valueOf(Answer).equals(binding.answer.getText().toString())) {
@@ -38,11 +38,21 @@ public class multiplicationActivity extends AppCompatActivity {
     }
 
 
-    int setAnswer() {
-        int a = (int) (Math.random() * 10);
-        int b = (int) (Math.random() * 10);
-        binding.example.setText(a + "  * " + b + " = ");
-        return a * b;
+    int setAnswer(boolean hardmode) {
+        if (hardmode){
+            int a = (int) (Math.random() * 100);
+            int b = (int) (Math.random() * 10);
+            binding.example.setText(a + "  * " + b + " = ");
+            return a * b;
+        }
+        else {
+            int a = (int) (Math.random() * 10);
+            int b = (int) (Math.random() * 10);
+            binding.example.setText(a + "  * " + b + " = ");
+            return a * b;
+        }
+
+
     }
     public void Check(boolean flag,int a){
         TextView message,res;

@@ -305,11 +305,7 @@ public class play9Activity extends AppCompatActivity {
         }.start();
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mediaPlayer.stop();
-    }
+
 
     public static Intent getInstancePlay9(Context context) {
         return new Intent(context, play9Activity.class);

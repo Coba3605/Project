@@ -1,5 +1,6 @@
 package com.example.schet;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +17,9 @@ import com.example.schet.databinding.ActivityMenuBinding;
 public class MenuActivity extends AppCompatActivity {
     ActivityMenuBinding binding;
     MediaPlayer mediaPlayer;
+    public static boolean hardmode;
+
+
 
 
     @Override
@@ -23,6 +27,14 @@ public class MenuActivity extends AppCompatActivity {
         binding = ActivityMenuBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
+        binding.check.setOnClickListener(view -> {
+            if (binding.check.isChecked()){
+                hardmode = true;
+            }
+            else {
+                hardmode = false;
+            }
+        });
 
         binding.subtraction.setOnClickListener(view -> {
             mediaPlayer.stop();
@@ -56,6 +68,7 @@ public class MenuActivity extends AppCompatActivity {
             info.setText(R.string.info);
             dialog.show();
         });
+
     }
 
     @Override
