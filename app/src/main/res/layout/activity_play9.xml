@@ -30,7 +30,7 @@
             android:textSize="40sp"/>
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="400dp"
            >
             <TableRow
                 android:layout_marginLeft="20dp"

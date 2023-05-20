@@ -7,18 +7,17 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.schet.DataBase.DataBaseManager;
+
 import com.example.schet.databinding.ActivitySummationBinding;
-import com.example.schet.databinding.DialogBinding;
+
 
 public class summationActivity extends AppCompatActivity {
     MediaPlayer mediaPlayer;
     ActivitySummationBinding binding;
-    DataBaseManager dbManager;
 
 
     @Override
@@ -26,7 +25,6 @@ public class summationActivity extends AppCompatActivity {
         binding = ActivitySummationBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
-        dbManager = new DataBaseManager(this);
 
         int Answer = setAnswer();
 

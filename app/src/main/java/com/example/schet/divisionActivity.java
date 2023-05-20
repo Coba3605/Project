@@ -2,7 +2,7 @@ package com.example.schet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.example.schet.databinding.ActivityDivisionBinding;
 
