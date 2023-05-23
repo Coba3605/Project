@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/text"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="50sp"
                 />
             <EditText
                 android:id="@+id/answer"
@@ -42,7 +42,7 @@
                 android:inputType="number"
                 android:hint="@string/answer"
                 android:textColor="@color/white"
-                android:textSize="30sp"/>
+                android:textSize="50sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -54,7 +54,7 @@
                 android:id="@+id/chek"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="30sp"
+                android:textSize="50sp"
                 android:text="@string/chek"
                 android:textColor="@color/white"
                 android:background="@android:color/transparent"/>
